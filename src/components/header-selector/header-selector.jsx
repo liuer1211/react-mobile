@@ -38,7 +38,7 @@ export default class HeaderSelector extends Component{
         const listerHeader= !icon ? '请选择头像' : (
             <div >
                 <span > 已选择头像：</span>
-                <img src={icon}/>
+                {/*<img src={icon}/>*/}
             </div>
         )
 
