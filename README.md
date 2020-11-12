@@ -5,6 +5,8 @@
     yarn install
     2.启动项目
     yarn start
+    3.一般访问
+    http://localhost:8080/#/login
 # mongodb安装
     启动
     C:\Program Files\MongoDB\Server\3.2\bin
