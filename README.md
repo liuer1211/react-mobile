@@ -16,4 +16,4 @@
     2.启动项目
     yarn start
 # 这个下面是启动mongodb和服务店项目图片，启动本项目后的图片。
-    E:\web\webstorm\xm\guanwang\git\react\react-mobile\src\assets\static
+    react-mobile\src\assets\static
