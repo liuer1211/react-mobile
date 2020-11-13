@@ -18,4 +18,7 @@
     2.启动项目
     yarn start
 # 这个下面是启动mongodb和服务端项目图片，启动本项目后的图片。
-    react-mobile\src\assets\static
+   1.本地项目启动结果
+   ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/3.png)
+   2.数据库启动结果和服务端启动结果
+   ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/1.png)
