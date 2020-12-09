@@ -15,7 +15,7 @@ const initUser={
 
 //user状态的reducer
 function user(state=initUser,action) {
-    console.log('action=',action)
+    console.log('action=',action) // 类型名称  参数
     switch (action.type) {
         case AUTH_SUCCESS://data:user
             const {type,header}=action.data

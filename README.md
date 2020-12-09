@@ -5,8 +5,11 @@
     yarn install
     2.启动项目
     yarn start
-    3.一般访问，目前只有登录注册
-    http://localhost:8080/#/login
+    3.一般访问
+    http://localhost:3000/#/login
+    http://localhost:3000/#/register
+    http://localhost:3000/#/dasheninfo
+    http://localhost:3000/#/laobaninfo
 # mongodb安装
     启动
     C:\Program Files\MongoDB\Server\3.2\bin

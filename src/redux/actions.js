@@ -57,6 +57,7 @@ export const login = (user) =>{
     return async dispatch =>{
         //发送登录异步的请求
         const response=await reqLogin(user)
+        // 接口返回值，处理
         const result=response.data
         if (result.code===0){//{code:0/1,data:user,msg:''}
             //分发成功的同步action
