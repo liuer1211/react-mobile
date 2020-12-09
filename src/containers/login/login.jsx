@@ -1,6 +1,7 @@
 // 注册路由
 import React,{Component} from 'react'
 import {NavBar,WingBlank,List,InputItem,WhiteSpace,Button} from 'antd-mobile'
+// import {NavBar,Icon,WingBlank,List,InputItem,WhiteSpace,Button} from 'antd-mobile'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 
@@ -22,7 +23,7 @@ export class Login extends Component{
         this.props.login(this.state)
     }
 
-    //to-login
+    //from-login-to-register
     toRegister =() =>{
         this.props.history.replace('/register')
     }
@@ -35,16 +36,26 @@ export class Login extends Component{
     }
 
     render() {
-        //后台数据
+        //后台数据,刚进来没有，展示登陆页
         const {msg,redirectTo}=this.props.user
+
         //有值重定向
         if(redirectTo){
             return <Redirect to={redirectTo}/>
         }
         return(
             <div>
-                <NavBar>BOOS &nbsp; 直 &nbsp; 聘</NavBar>
-                <Logo/>
+                {/*头*/}
+                <NavBar>聊 &nbsp; 天 &nbsp; 互 &nbsp; 动 </NavBar>
+                {/*<NavBar mode="dark" icon={<Icon type="left" />}*/}
+                {/*        onLeftClick={() => console.log('onLeftClick')}*/}
+                {/*        rightContent={[*/}
+                {/*            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,*/}
+                {/*            <Icon key="1" type="ellipsis" />,*/}
+                {/*        ]}>聊 &nbsp; 天 &nbsp; 互 &nbsp; 动 </NavBar>*/}
+                {/*logo*/}
+                <Logo name={"fromLogin"}/>
+                {/*列好*/}
                 <WingBlank>
                     <List>
                         {msg ? <div className='error-msg'>{msg}</div>:null}
@@ -52,7 +63,6 @@ export class Login extends Component{
                         <WhiteSpace/>
                         <InputItem placeholder='password' type='password' onChange={val=>{this.handleChange('password',val)}}>password:</InputItem>
                         <WhiteSpace/>
-
                         <Button type='primary' onClick={this.login}>Login</Button>
                         <WhiteSpace/>
                         <Button onClick={this.toRegister}>no having</Button>

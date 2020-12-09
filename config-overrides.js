@@ -39,7 +39,7 @@ module.exports = function override(config, env) {
                 {
                     loader: require.resolve('less-loader'),
                     options: {
-// theme vars, also can use theme.js instead of this.
+// theme vars, also can use theme.js instead of this.  配置antd-mobile的全局皮肤颜色
                         modifyVars: {
                             "@brand-primary": "#1cae82", // 正常
                             "@brand-primary-tap": "#1DA57A", // 按下

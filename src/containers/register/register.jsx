@@ -47,7 +47,7 @@ export class Register extends Component{
 
         return(
             <div>
-                <NavBar>BOOS &nbsp; 直 &nbsp; 聘</NavBar>
+                <NavBar>聊 &nbsp; 天 &nbsp; 互 &nbsp; 动 </NavBar>
                 <Logo/>
                 <WingBlank>
                     <List>

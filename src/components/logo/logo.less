@@ -1,7 +1,55 @@
 .logo-container{
   text-align: center;
+  position: relative;
+  height: 240px;
+  margin: 10px;
+  box-sizing: border-box;
   .logo-img{
     width: 240px;
     height: 240px;
+  }
+  .logo-container-bg{
+    position: absolute;
+    background: #00CC99;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    left: 50%;
+    top: 50%;
+    margin-left: -120px;
+    margin-top: -120px;
+    text-align: center;
+    line-height: 240px;
+    color: #fff;
+    font-size: 60px;
+    &.tran{
+      -webkit-animation: wheel-rotate 10s linear infinite;
+      -moz-animation: wheel-rotate 10s linear infinite;
+      animation: wheel-rotate 10s linear infinite;
+    }
+  }
+}
+@-webkit-keyframes wheel-rotate {
+  from{
+    -webkit-transform: rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes wheel-rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes wheel-rotate {
+  from{
+    -moz-transform: rotate(0deg);
+  }
+  to{
+    -moz-transform: rotate(360deg);
   }
 }
