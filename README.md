@@ -17,11 +17,11 @@
     yarn install
     2.启动项目
     yarn start
-# 这个下面是启动mongodb和服务端项目图片，启动本项目后的图片。
+# 启动本项目后的图片。
    1.本地项目启动结果登陆和注册
    ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/6.png)
    ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/7.png)
-   2.数据库启动结果和服务端启动结果
+   2.数据库mongodb启动结果和服务端启动结果
    ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/5.png)
    ![image.png]( https://liuer1211.github.io/react-mobile/src/assets/static/4.png)
    
