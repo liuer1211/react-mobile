@@ -74,8 +74,8 @@ export class Login extends Component{
 }
 // 先执行这里，获取常量
 export default connect(
-    state =>({user:state.user}), //后台数据
-    {login}                   //登录异步
+    state =>({user:state.user}), //变量：后台数据
+    {login}                   //函数：登录异步方法
 )(Login)
 
 

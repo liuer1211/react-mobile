@@ -22,6 +22,8 @@ export const register = (user) =>{
     } else if(!password){
         return errorMsg('password不能为空')
     } else if(password!==password2){
+        // {data: "2次密码要一致"
+        // type: "error_msg"}
         return errorMsg('2次密码要一致')
     }
     //合法
