@@ -9,7 +9,7 @@ import store from './redux/store'
 import Register from './containers/register/register'
 import Login from './containers/login/login'
 import Main from './containers/main/main'
-import Model from './containers/model/model'
+// import Model from './containers/model/model'
 
 import './assets/css/index.less'
 //35

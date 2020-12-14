@@ -10,11 +10,13 @@ class NavFooter extends Component{
     render() {
         let list=[
             {
+                id:'1',
                 path:'',
                 text:'大神',
                 icon:'dashen'
             },
             {
+                id:'2',
                 path:'',
                 text:'老板',
                 icon:'dashen-selected'
@@ -25,7 +27,7 @@ class NavFooter extends Component{
                 {
                     list.map((nav)=>(
                         <Item
-                            // key={nav.path}
+                            key={nav.id}
                             title={nav.text}
                             icon={{uri:require(`./images/${nav.icon}.png`)}}
                             // selectedIcon={{uri: require(`./images/${nav.icon}-selected.png`)}}
