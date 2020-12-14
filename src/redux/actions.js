@@ -3,13 +3,16 @@
 * 异步action
 * 同步action
 * */
-import {AUTH_SUCCESS,ERROR_MSG} from './action-types'
-import {reqRegister,reqLogin} from "../api";
+import {AUTH_SUCCESS,ERROR_MSG,GOODS_INFO} from './action-types'
+import {reqRegister,reqLogin,reqShopGoods} from "../api";
 
 //授权成功的同步action
 const authSuccess=(user) => ({type:AUTH_SUCCESS,data:user})
 //错误提示信息
 const errorMsg=(msg) => ({type:ERROR_MSG,data:msg})
+// 商品
+const goods_info=(msg) => ({type:GOODS_INFO,data:msg})
+
 // const errorMsg=(msg) => ({type:ERROR_MSG,msg})
 
 //注册的异步action
@@ -67,6 +70,20 @@ export const login = (user) =>{
         } else{
             //分发失败的同步信息action
             dispatch(errorMsg(result.msg))
+        }
+    }
+}
+
+// 获得商品列表
+export const goodsFun = () => {
+    debugger
+    return async dispatch =>{
+        const response = await reqShopGoods()
+        const result=response.data
+        if (result) {
+            dispatch(goods_info(result.data))
+        } else {
+
         }
     }
 }

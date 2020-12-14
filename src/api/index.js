@@ -12,3 +12,9 @@ export const reqLogin=({username,password})=>ajax('/login',{username,password},'
 export const reqUpdateUser=(user)=> ajax('/update',user,'POST')
 
 
+/**
+ * 获取商家商品数组
+ */
+export const reqShopGoods = () => ajax('/goods')
+
+

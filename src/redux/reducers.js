@@ -2,7 +2,7 @@
 * 包含多个reducer函数：根据老的state和指定的action返回一个新的state
 * */
 import {combineReducers} from 'redux'
-import {AUTH_SUCCESS,ERROR_MSG} from './action-types'
+import {AUTH_SUCCESS,ERROR_MSG,GOODS_INFO} from './action-types'
 
 import {getRedirectTo} from '../utils'
 
@@ -12,6 +12,8 @@ const initUser={
     msg:'',//错误提示信息
     redirectTo:'',//自动重定向的路径
 }
+
+const goodsInit={}
 
 //user状态的reducer
 function user(state=initUser,action) {
@@ -53,8 +55,20 @@ function user(state=initUser,action) {
     }
 }
 
+// goods
+function goods(state=goodsInit,action) {
+    console.log('action=',action) // 类型名称  参数
+    switch (action.type) {
+        case GOODS_INFO:
+            return action.data
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    user
+    user,
+    goods
 })
 
 //向外暴露的状态结构：｛xxx:0,yyy:0｝

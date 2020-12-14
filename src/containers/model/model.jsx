@@ -3,10 +3,12 @@ import {WingBlank, WhiteSpace, Card, NavBar, Icon} from 'antd-mobile'
 import {DatePicker,List,InputItem,Button} from 'antd-mobile'
 
 import NavFooter from '../../components/nav-footer/nav-footer'
-
+import {goodsFun} from "../../redux/actions";
 // import './css/model.css'
 
 import QueueAnim from 'rc-queue-anim'
+import {connect} from "react-redux";
+
 const Header = Card.Header
 const Body = Card.Body
 
@@ -44,7 +46,7 @@ if (minDate.getDate() !== maxDate.getDate()) {
 //         <span style={{ float: 'right', color: '#888' }}>{extra}</span>
 //     </div>
 // );
-export default class Model extends Component {
+class Model extends Component {
     state = {
         date: now,
         time: now,
@@ -62,7 +64,14 @@ export default class Model extends Component {
     toRegister =() =>{
         console.log(this)
     }
+
+    //
+    componentDidMount() {
+        this.props.goodsFun()
+    }
+
     render () {
+        console.log(this.props)
         let list = [
             {id:'1',name:'张三',pro:'web前端',com:'某公司',wri:'html+css+js'},
             {id:'2',name:'李三',pro:'Java后端',com:'某公司',wri:'spring+springMvc+mybatis'}
@@ -126,3 +135,9 @@ export default class Model extends Component {
         )
     }
 }
+
+// 先执行这里，获取常量
+export default connect(
+    state =>({goods:state.goods}), //变量：后台数据
+    {goodsFun}                   //函数：登录异步方法
+)(Model)
