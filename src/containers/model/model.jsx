@@ -67,11 +67,11 @@ class Model extends Component {
 
     //
     componentDidMount() {
-        this.props.goodsFun()
+        // this.props.goodsFun()
     }
 
     render () {
-        console.log(this.props)
+        // console.log(this.props)
         let list = [
             {id:'1',name:'张三',pro:'web前端',com:'某公司',wri:'html+css+js'},
             {id:'2',name:'李三',pro:'Java后端',com:'某公司',wri:'spring+springMvc+mybatis'}

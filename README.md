@@ -10,6 +10,8 @@
     http://localhost:3000/#/register
     http://localhost:3000/#/dasheninfo
     http://localhost:3000/#/laobaninfo
+    4.打包
+    yarn build
 # mongodb安装
     启动
     C:\Program Files\MongoDB\Server\3.2\bin
@@ -34,3 +36,6 @@
         "@brand-primary": "#1cae82", // 正常
         "@brand-primary-tap": "#1DA57A", // 按下
     },
+# 访问
+    在github中设置访问地址，然后即可访问。由于本项目不是纯静态项目，需要服务端支持，只能看到大概样子
+   [点我访问](https://liuer1211.github.io/react-mobile/build/#/)
